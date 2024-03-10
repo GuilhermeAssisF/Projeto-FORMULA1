@@ -11,6 +11,15 @@ public class Piloto
     int pontos;
     String nome;
     int idade;
+    int tempoEquipe;
+    int meses;
+
+    public Piloto(int pontos, String nome, int idade, int meses) {
+        this.pontos = pontos;
+        this.nome = nome;
+        this.idade = idade;
+        this.meses = meses;
+    }
 
     public int getPontos() {
         return pontos;
@@ -36,12 +45,18 @@ public class Piloto
         this.idade = idade;
     }
 
-    public int getTempoEquipe() {
-        return tempoEquipe;
+    public int tempodeEquipe() {
+        int tempodeEquipe = meses/12;
+        return tempodeEquipe;
     }
 
-    public void setTempoEquipe(int tempoEquipe) {
-        this.tempoEquipe = tempoEquipe;
+    //Metodo para exibir o piloto
+    public void exibePiloto(){
+        System.out.println("------ " + nome.toUpperCase() + " ------");
+        System.out.println("Pontos: " + pontos);
+        System.out.println("Tempo de Equipe: " + tempodeEquipe() + " anos");
     }
-    int tempoEquipe;
+
+    
+    
 }

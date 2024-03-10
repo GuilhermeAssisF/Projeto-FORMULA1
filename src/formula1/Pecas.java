@@ -1,19 +1,25 @@
-
 package formula1;
-
 
 public class Pecas 
 {
-    String peca;
-    int desgastePeca; 
+    String nomePeca;
+    int desgastePeca;
+    int quantidadePeca; 
     String dataFabricacao;
 
-    public String getPeca() {
-        return peca;
+    public Pecas(String nomePeca, int desgastePeca, int quantidadePeca, String dataFabricacao) {
+        this.nomePeca = nomePeca;
+        this.desgastePeca = desgastePeca;
+        this.quantidadePeca = quantidadePeca;
+        this.dataFabricacao = dataFabricacao;
     }
 
-    public void setPeca(String peca) {
-        this.peca = peca;
+    public String getPeca() {
+        return nomePeca;
+    }
+
+    public void setNomePeca(String nomePeca) {
+        this.nomePeca = nomePeca;
     }
 
     public int getDesgastePeca() {
@@ -32,4 +38,27 @@ public class Pecas
         this.dataFabricacao = dataFabricacao;
     }
     
+    public int getQuantidadePecas(){
+        return quantidadePeca;
+    }
+    public void setQuantidaePecas(int quantidadePeca) {
+        this.quantidadePeca = quantidadePeca;
+    }
+
+    //Metodos que aidiciona e retira pecas
+    public void adicionaUmaPeca(int quantidadePeca){
+        quantidadePeca += 1;
+    }
+    public void retiraUmaPeca(int quantidaPeca){
+        quantidadePeca -= 1;
+    }
+    
+    //Metodo que exibe as pecas
+    public void exibePecas(){
+        System.out.println("\nCONTROLE DE PECAS");
+        System.out.println("Peca: " + nomePeca);
+        System.out.println("Desgaste: " + desgastePeca + "%");
+        System.out.println("Quantidade em estoque: " + quantidadePeca);
+        System.out.println("Data de fabricacao: " + dataFabricacao);
+    }
 }

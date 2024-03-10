@@ -1,12 +1,16 @@
 
 package formula1;
 
-
-public class Pneu 
-{
+public class Pneu {
     String tipo;
-    int desgaste;
+    int quantidade;
     String fabricante;
+
+    public Pneu(String tipo, int quantidade, String fabricante) {
+        this.tipo = tipo;
+        this.quantidade = quantidade;
+        this.fabricante = fabricante;
+    }
 
     public String getTipo() {
         return tipo;
@@ -16,12 +20,12 @@ public class Pneu
         this.tipo = tipo;
     }
 
-    public int getDesgaste() {
-        return desgaste;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setDesgaste(int desgaste) {
-        this.desgaste = desgaste;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     public String getFabricante() {
@@ -30,5 +34,19 @@ public class Pneu
 
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
+    }
+
+    public void adicionaPneus(){
+        quantidade += 1;
+    }
+    public void retiraPneus(){
+        quantidade -= 1;
+    }
+
+    //Metodo que exibe a quantidade pneus
+    public void exibePneus(){
+        System.out.println("------ PNEUS " + tipo.toUpperCase() + " ------");
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Fabricante: " + fabricante);
     }
 }
