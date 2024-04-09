@@ -1,16 +1,18 @@
 
 package formula1;
 
-public class Pneu {
+public class Pneu{
     String tipo;
-    int quantidade;
-    String fabricante;
-
     public Pneu(String tipo, int quantidade, String fabricante) {
         this.tipo = tipo;
         this.quantidade = quantidade;
         this.fabricante = fabricante;
     }
+
+    int quantidade;
+    String fabricante;
+
+    
 
     public String getTipo() {
         return tipo;

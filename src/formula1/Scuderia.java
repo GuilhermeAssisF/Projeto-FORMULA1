@@ -7,10 +7,88 @@ public class Scuderia {
     int divisao;
     Carro car;
     Engenheiro eng;
-    Patrocinio patrocinador1;
+    Patrocinio patrocinador;
     Pecas peca;
     Piloto piloto1, piloto2;
     Pneu pneuMedio, pneuMacio, pneuDuro;
+
+    //getter setter engenheiro
+    public Engenheiro getEng() {
+        return eng;
+    }
+
+    public void setEng(Engenheiro eng) {
+        this.eng = eng;
+    }
+
+    //getter setters patrocinio
+    public Patrocinio getPatrocinador1() {
+        return patrocinador;
+    }
+
+    public void setPatrocinador1(Patrocinio patrocinador1) {
+        this.patrocinador = patrocinador1;
+    }
+
+    //getter setter pecas
+    public Pecas getPeca() {
+        return peca;
+    }
+
+    public void setPeca(Pecas peca) {
+        this.peca = peca;
+    }
+
+    //getter setters pneu
+    public Piloto getPiloto1() {
+        return piloto1;
+    }
+
+    public void setPiloto1(Piloto piloto1) {
+        this.piloto1 = piloto1;
+    }
+
+    public Piloto getPiloto2() {
+        return piloto2;
+    }
+
+    public void setPiloto2(Piloto piloto2) {
+        this.piloto2 = piloto2;
+    }
+
+    //getter setter pneus
+    public Pneu getPneuMedio() {
+        return pneuMedio;
+    }
+
+    public void setPneuMedio(Pneu pneuMedio) {
+        this.pneuMedio = pneuMedio;
+    }
+
+    public Pneu getPneuMacio() {
+        return pneuMacio;
+    }
+
+    public void setPneuMacio(Pneu pneuMacio) {
+        this.pneuMacio = pneuMacio;
+    }
+
+    public Pneu getPneuDuro() {
+        return pneuDuro;
+    }
+
+    public void setPneuDuro(Pneu pneuDuro) {
+        this.pneuDuro = pneuDuro;
+    }
+
+    //getter setter carro
+    public Carro getCar() {
+        return car;
+    }
+
+    public void setCar(Carro car) {
+        this.car = car;
+    }
     
     //Montagem Scuderia
     public Scuderia(String nomeEquipe,String cor,int divisao) {
@@ -18,46 +96,6 @@ public class Scuderia {
         this.cor = cor;
         this.divisao = divisao;
         
-    }
-
-    //Montagem Carros
-    public void carroScuderia( double peso, String motor, double potencia, String corCarro){
-        this.car = new Carro(peso, motor, potencia, corCarro);
-    }
-
-    //Montagem Engenheiro
-    public void engenheiroScudeia(String nomeEngenheiro,String tipoEngenheiro,int idadeEngenheiro){
-        this.eng = new Engenheiro(nomeEngenheiro, tipoEngenheiro, idadeEngenheiro);
-    }
-
-    //Montagem Patrocinio
-    public void patrocinioScuderia1(String patrocinador, int valor, int tempoPatrocinio, int anoInicio){
-        this.patrocinador1 = new Patrocinio(patrocinador, valor, tempoPatrocinio, anoInicio);
-    }
-    
-    //Montagem Pecas
-    public void pecascarro(String nomePeca, int desgastePeca, int quantidadePeca, String dataFabricacao){
-        this.peca = new Pecas(nomePeca, desgastePeca, quantidadePeca, dataFabricacao);
-    }
-
-    //Definição Pilotos
-    public void piloto1(int pontos, String nome, int idade, int meses){
-        this.piloto1 = new Piloto(pontos, nome, idade, meses);
-    }
-
-    public void piloto2(int pontos, String nome, int idade, int meses){
-        this.piloto2 = new Piloto(pontos, nome, idade, meses);
-    }
-
-    //Controle de Pneus
-    public void contagemPneusMacios(String tipo, int quantidade, String fabricante){
-        this.pneuMacio = new Pneu(tipo, quantidade, fabricante);
-    }
-    public void contagemPneusDuro(String tipo, int quantidade, String fabricante){
-        this.pneuDuro = new Pneu(tipo, quantidade, fabricante);
-    }
-    public void contagemPneusMedio(String tipo, int quantidade, String fabricante){
-        this.pneuMedio = new Pneu(tipo, quantidade, fabricante);
     }
 
     //Getters Setters Scuderia
@@ -96,7 +134,7 @@ public class Scuderia {
         piloto1.exibePiloto();
         piloto2.exibePiloto();
         eng.exibeEngenheiro();
-        patrocinador1.exibePatrocionio();
+        patrocinador.exibePatrocionio();
         peca.exibePecas();
         System.out.println("\nPNEUS");
         pneuDuro.exibePneus();
