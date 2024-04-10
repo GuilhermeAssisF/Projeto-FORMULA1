@@ -1,5 +1,5 @@
 
-package formula1;
+package equipe;
 
 public class Pneu{
     String tipo;

@@ -1,5 +1,5 @@
 
-package formula1;
+package equipe;
 
 import java.text.DecimalFormat;
 public class Patrocinio 

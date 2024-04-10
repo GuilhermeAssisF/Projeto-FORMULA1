@@ -1,4 +1,4 @@
-package formula1;
+package equipe;
 
 public class Pecas 
 {
