@@ -1,12 +1,15 @@
+// Declaração do pacote onde a classe está localizada
 package equipe;
 
-public class Pecas 
-{
-    String nomePeca;
-    int desgastePeca;
-    int quantidadePeca; 
-    String dataFabricacao;
+// Definição da classe Pecas
+public class Pecas {
+    // Atributos da classe Pecas
+    String nomePeca; // Nome da peça
+    int desgastePeca; // Nível de desgaste da peça (em %)
+    int quantidadePeca; // Quantidade de peças em estoque
+    String dataFabricacao; // Data de fabricação da peça
 
+    // Construtor da classe Pecas que inicializa os atributos
     public Pecas(String nomePeca, int desgastePeca, int quantidadePeca, String dataFabricacao) {
         this.nomePeca = nomePeca;
         this.desgastePeca = desgastePeca;
@@ -14,7 +17,9 @@ public class Pecas
         this.dataFabricacao = dataFabricacao;
     }
 
-    public String getPeca() {
+    // Métodos getters e setters para acessar e modificar os atributos
+
+    public String getNomePeca() {
         return nomePeca;
     }
 
@@ -30,6 +35,14 @@ public class Pecas
         this.desgastePeca = desgastePeca;
     }
 
+    public int getQuantidadePeca() {
+        return quantidadePeca;
+    }
+
+    public void setQuantidadePeca(int quantidadePeca) {
+        this.quantidadePeca = quantidadePeca;
+    }
+
     public String getDataFabricacao() {
         return dataFabricacao;
     }
@@ -37,24 +50,19 @@ public class Pecas
     public void setDataFabricacao(String dataFabricacao) {
         this.dataFabricacao = dataFabricacao;
     }
-    
-    public int getQuantidadePecas(){
-        return quantidadePeca;
-    }
-    public void setQuantidaePecas(int quantidadePeca) {
-        this.quantidadePeca = quantidadePeca;
-    }
 
-    //Metodos que aidiciona e retira pecas
-    public void adicionaUmaPeca(int quantidadePeca){
+    // Métodos para adicionar e retirar peças do estoque
+
+    public void adicionaUmaPeca() {
         quantidadePeca += 1;
     }
-    public void retiraUmaPeca(int quantidaPeca){
+
+    public void retiraUmaPeca() {
         quantidadePeca -= 1;
     }
-    
-    //Metodo que exibe as pecas
-    public void exibePecas(){
+
+    // Método para exibir as informações da peça
+    public void exibePecas() {
         System.out.println("\nCONTROLE DE PECAS");
         System.out.println("Peca: " + nomePeca);
         System.out.println("Desgaste: " + desgastePeca + "%");

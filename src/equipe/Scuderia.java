@@ -134,7 +134,7 @@ public class Scuderia {
         piloto1.exibePiloto();
         piloto2.exibePiloto();
         eng.exibeEngenheiro();
-        patrocinador.exibePatrocionio();
+        patrocinador.exibePatrocinio();
         peca.exibePecas();
         System.out.println("\nPNEUS");
         pneuDuro.exibePneus();

@@ -1,24 +1,22 @@
-
+// Declaração do pacote onde a classe está localizada
 package equipe;
 
-public class Engenheiro {
-    String nomeEngenheiro;
-    String tipoEngenheiro;
-    int idadeEngenheiro;
+// Definição da classe Engenheiro que estende a classe Funcionario
+public class Engenheiro extends Funcionario {
+    // Atributos da classe Engenheiro
+    String tipoEngenheiro; // Tipo de engenheiro (especialidade)
+    int idadeEngenheiro; // Idade do engenheiro
 
-    public Engenheiro(String nomeEngenheiro,String tipoEngenheiro,int idadeEngenheiro) {
-        this.nomeEngenheiro = nomeEngenheiro;
+    // Construtor da classe Engenheiro que inicializa os atributos
+    public Engenheiro(String tipoEngenheiro, int idadeEngenheiro, String nome_funcionario, int cpf_funcionario) {
+        // Chamada ao construtor da classe pai (Funcionario)
+        super(nome_funcionario, cpf_funcionario);
+        // Inicialização dos atributos específicos do engenheiro
         this.tipoEngenheiro = tipoEngenheiro;
         this.idadeEngenheiro = idadeEngenheiro;
     }
 
-    public String getNomeEngenheiro() {
-        return nomeEngenheiro;
-    }
-
-    public void setNomeEngenheiro(String nomeEngenheiro) {
-        this.nomeEngenheiro = nomeEngenheiro;
-    }
+    // Métodos getters e setters para acessar e modificar os atributos
 
     public String getTipoEngenheiro() {
         return tipoEngenheiro;
@@ -36,14 +34,11 @@ public class Engenheiro {
         this.idadeEngenheiro = idadeEngenheiro;
     }
 
-    //Metodo para exibir engenheiro
-    public void exibeEngenheiro(){
+    // Método para exibir as informações do engenheiro
+    public void exibeEngenheiro() {
         System.out.println("\nENGENHEIRO");
-        System.out.println("Nome: " + nomeEngenheiro);
+        System.out.println("Nome: " + getNome_funcionario()); // Utilizando o método getter da classe pai
         System.out.println("Especialidade: " + tipoEngenheiro);
         System.out.println("Idade: " + idadeEngenheiro);
     }
-
-    
-
 }
